@@ -1,15 +1,6 @@
 services:
   - type: static
     name: frontend
-    rootDir: frontend
+    rootDir: Web frontend
     buildCommand: npm run build
     staticPublishPath: dist
-    headers:
-      - source: "**"
-        headers:
-          - key: "Cache-Control"
-            value: "public, max-age=0, must-revalidate"
-    redirects:
-      - source: "/**"
-        destination: "/index.html"
-        type: 200
